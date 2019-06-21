@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+bootJar {
+    archiveBaseName = 'application'
+}
+
+dependencies {
+    compile project(":peanuts-api")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.axonframework:axon-spring-boot-starter:4.1.1")
+}
+

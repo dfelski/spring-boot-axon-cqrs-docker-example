@@ -1,0 +1,5 @@
+rootProject.name = 'peanuts-project'
+
+include 'command-service'
+include 'query-service'
+include 'peanuts-api'
