@@ -21,7 +21,9 @@ POST http://localhost:8081/bowl
 The result contains a UUID which identifies the bowl for further actions.
 Let's fill the bowl with some peanuts  
 ```
-PUT http://localhost:8081/bowl/<uuid>/peanuts {"amount" : "100"}
+PUT http://localhost:8081/bowl/<uuid>/peanuts 
+
+{"amount" : "100"}
 ```
 
 The bowl should contain 100 peanuts now, let's check this
@@ -31,7 +33,9 @@ GET http://localhost:8082/bowl/<uuid>/peanuts
 
 Yummy! We should be able to take some peanuts out of the bowl now
 ```
-DELETE http://localhost:8081/bowl/<uuid>/peanuts {"amount" : "10"}
+DELETE http://localhost:8081/bowl/<uuid>/peanuts
+
+{"amount" : "10"}
 ```
 
 Let's see how many peanuts are left
