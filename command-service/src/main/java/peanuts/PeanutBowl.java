@@ -28,7 +28,6 @@ class PeanutBowl {
     PeanutBowl(PlaceNewBowlOnTableCommand placeNewBowlOnTableCommand){
         LOGGER.info("handle {}", placeNewBowlOnTableCommand);
 
-        //validation
         Objects.requireNonNull(placeNewBowlOnTableCommand.getId());
         apply(new BowlPlacedOnTableEvent(placeNewBowlOnTableCommand.getId()));
     }

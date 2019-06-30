@@ -41,7 +41,7 @@ class PeanutProjection {
     }
 
     @QueryHandler
-    public PeanutsInBowlResult handle(PeanutsQuery peanutsQuery){
+    PeanutsInBowlResult handle(PeanutsQuery peanutsQuery){
         if(!peanuts.containsKey(peanutsQuery.getId())) {
             throw new IllegalArgumentException("no bowl with id '"+peanutsQuery.getId()+"' found");
         }

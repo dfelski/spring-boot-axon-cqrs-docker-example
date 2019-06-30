@@ -26,9 +26,7 @@ public class PeanutsTakenOutEvent {
     @Override
     public String toString() {
         return "PeanutsTakenOutEvent{" +
-                "id=" + id +
-                ", amount=" + amount +
-                '}';
+                "id=" + id + ", amount=" + amount +'}';
     }
 
 }
