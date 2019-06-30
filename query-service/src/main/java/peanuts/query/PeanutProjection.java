@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import peanuts.BowlFilledEvent;
-import peanuts.BowlOnTablePlacedEvent;
+import peanuts.BowlPlacedOnTableEvent;
 import peanuts.PeanutsTakenOutEvent;
 
 import java.util.HashMap;
@@ -21,9 +21,9 @@ class PeanutProjection {
     private Map<UUID, Integer> peanuts = new HashMap<>();
 
     @EventHandler
-    void handle(BowlOnTablePlacedEvent bowlOnTablePlacedEvent){
-        LOGGER.info("handle {}", bowlOnTablePlacedEvent);
-        peanuts.put(bowlOnTablePlacedEvent.getId(), 0);
+    void handle(BowlPlacedOnTableEvent bowlPlacedOnTableEvent){
+        LOGGER.info("handle {}", bowlPlacedOnTableEvent);
+        peanuts.put(bowlPlacedOnTableEvent.getId(), 0);
     }
 
     @EventHandler

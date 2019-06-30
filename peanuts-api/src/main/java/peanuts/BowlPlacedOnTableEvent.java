@@ -4,12 +4,12 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 import java.util.UUID;
 
-public class BowlOnTablePlacedEvent {
+public class BowlPlacedOnTableEvent {
 
     @TargetAggregateIdentifier
     private UUID id;
 
-    public BowlOnTablePlacedEvent(UUID id) {
+    public BowlPlacedOnTableEvent(UUID id) {
         this.id = id;
     }
 
@@ -19,7 +19,7 @@ public class BowlOnTablePlacedEvent {
 
     @Override
     public String toString() {
-        return "BowlOnTablePlacedEvent{" +
+        return "BowlPlacedOnTableEvent{" +
                 "id=" + id +
                 '}';
     }

@@ -30,7 +30,7 @@ class PeanutBowl {
 
         //validation
         Objects.requireNonNull(placeNewBowlOnTableCommand.getId());
-        apply(new BowlOnTablePlacedEvent(placeNewBowlOnTableCommand.getId()));
+        apply(new BowlPlacedOnTableEvent(placeNewBowlOnTableCommand.getId()));
     }
 
     @CommandHandler
@@ -50,9 +50,9 @@ class PeanutBowl {
     }
 
     @EventHandler
-    void handle(BowlOnTablePlacedEvent bowlOnTablePlacedEvent){
-        LOGGER.info("handle {}", bowlOnTablePlacedEvent);
-        this.id = bowlOnTablePlacedEvent.getId();
+    void handle(BowlPlacedOnTableEvent bowlPlacedOnTableEvent){
+        LOGGER.info("handle {}", bowlPlacedOnTableEvent);
+        this.id = bowlPlacedOnTableEvent.getId();
     }
 
     @EventHandler
